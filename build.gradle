@@ -1,0 +1,43 @@
+allprojects {
+    apply plugin: 'java'
+    apply plugin: 'war'
+
+    defaultTasks 'clean', 'jar'
+
+    sourceCompatibility = 1.8
+    targetCompatibility = 1.8
+
+    [compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
+
+
+    ext {
+        profile = System.getProperty("env", "dev")
+        println "[current profile]:" + profile
+    }
+
+    sourceSets {
+        main {
+            resources {
+                srcDirs = ["src/main/resources", "env/$profile"]
+            }
+        }
+    }
+
+    repositories {
+        jcenter()
+        mavenLocal()
+        mavenCentral()
+        maven { url 'http://gradle-maven.zhaopin.com:8081/nexus/content/repositories/snapshots' }
+        maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
+        maven { url 'https://repo.maven.apache.org/maven2/' }
+        maven { url 'http://maven.restlet.org/' }
+    }
+
+    dependencies {
+        compile "log4j:log4j:+"
+        compile "org.apache.lucene:lucene-analyzers-common:+"
+        compile "biz.paluch.logging:logstash-gelf:+"
+
+        testCompile "junit:junit:+"
+    }
+}

@@ -1,0 +1,3 @@
+rootProject.name = 'lexicon'
+include 'creater', 'ik', 'ik-company', 'ik-position'
+

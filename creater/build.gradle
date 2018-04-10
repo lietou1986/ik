@@ -1,0 +1,10 @@
+ext {
+
+}
+
+dependencies {
+    compile project(':ik')
+    compile project(':ik-company')
+
+    compile "org.json:json:+"
+}

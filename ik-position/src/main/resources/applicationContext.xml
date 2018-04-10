@@ -1,0 +1,25 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context-3.2.xsd
+       http://www.springframework.org/schema/util
+       http://www.springframework.org/schema/util/spring-util-3.2.xsd">
+
+    <context:component-scan base-package="com.zpcampus.analysis.position"/>
+    <context:annotation-config/>
+
+    <context:property-placeholder location="classpath:config.properties"/>
+    <util:properties id="config" location="classpath:config.properties"/>
+
+    <bean id="basicServer" class="com.zpcampus.analysis.position.wordServer.BasicServer"/>
+    <bean id="exception" class="com.zpcampus.analysis.position.wordServer.Exception">
+        <constructor-arg ref="basicServer"/>
+    </bean>
+    <bean id="segment" class="com.zpcampus.analysis.position.Segment">
+        <constructor-arg ref="basicServer"/>
+    </bean>
+</beans>
