@@ -71,10 +71,6 @@ public class Lexeme implements Comparable<Lexeme> {
         this.lexemeType = lexemeType;
     }
 
-    public Lexeme(String lexemeText) {
-        this.lexemeText = lexemeText;
-    }
-
     /*
      * 判断词元相等算法
      * 起始位置偏移、起始位置、终止位置相同

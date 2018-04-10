@@ -38,7 +38,7 @@ import java.util.List;
  */
 public final class IKSegmenter {
 
-    //字符串reader
+    //字符窜reader
     private Reader input;
     //分词器配置项
     private Configuration cfg;

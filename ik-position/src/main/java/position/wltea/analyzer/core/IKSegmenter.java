@@ -66,12 +66,6 @@ public final class IKSegmenter {
         this.init();
     }
 
-    public IKSegmenter(Reader input) {
-        this.input = input;
-        this.cfg = DefaultConfig.getInstance();
-        this.init();
-    }
-
     /**
      * IK分词器构造函数
      * @param input

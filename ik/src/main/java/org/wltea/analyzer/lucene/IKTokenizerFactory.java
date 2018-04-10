@@ -1,11 +1,11 @@
 package org.wltea.analyzer.lucene;
 
-import org.apache.lucene.analysis.Tokenizer;
-import org.apache.lucene.analysis.util.ResourceLoader;
-import org.apache.lucene.util.AttributeFactory;
 import org.mlcs.search.mlcsseg.lucene.ReloadableTokenizerFactory;
 import org.mlcs.search.mlcsseg.lucene.ReloaderRegister;
 import org.wltea.analyzer.dic.Dictionary;
+import org.apache.lucene.analysis.Tokenizer;
+import org.apache.lucene.analysis.util.ResourceLoader;
+import org.apache.lucene.util.AttributeFactory;
 
 import java.io.IOException;
 import java.io.InputStream;

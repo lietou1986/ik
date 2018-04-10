@@ -15,9 +15,7 @@ import java.util.*;
  */
 public class ReloaderRegister {
 
-
     private static Map<String, ConfigChecker> reloadAwares = new HashMap<String, ConfigChecker>();
-
 
     public static class ConfigChecker {
 

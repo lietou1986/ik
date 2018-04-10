@@ -46,6 +46,23 @@ public class WordSegServiceImpl extends IKWordSegServiceImpl {
      */
     @Override
     public WordModel segWord(String input) {
-        return smartSegWord(input);
+        WordModel wordModel = super.segWord(input);//IK基本分词
+
+        //分词校准
+        WordAdjust wordSegAdjust = new WordAdjust();
+
+        wordModel = wordSegAdjust.adjust(wordModel);
+
+        //分词输出
+        String str = null;
+        for (Lexeme lexeme1 : wordModel.getLexemes()) {
+            if (null == str) {
+                str = lexeme1.getLexemeText();
+                continue;
+            }
+            str = str + " " + lexeme1.getLexemeText();
+        }
+        wordModel.setContent(str);
+        return wordModel;
     }
 }

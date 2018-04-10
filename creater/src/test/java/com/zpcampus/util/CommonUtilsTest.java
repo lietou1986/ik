@@ -8,7 +8,7 @@ import java.util.Map;
 /**
  * Created by len.zhang on 2014/8/14.
  */
-public class CommonUtilTest extends TestCase {
+public class CommonUtilsTest extends TestCase {
 
     public void testIsNullOrEmpety() {
         String word = "";

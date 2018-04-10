@@ -1,8 +1,8 @@
 package com.zpcampus.core;
 
 import com.zpcampus.util.FileUtils;
-import org.wltea.analyzer.core.IKSegmenter;
-import org.wltea.analyzer.core.Lexeme;
+import company.wltea.analyzer.core.IKSegmenter;
+import company.wltea.analyzer.core.Lexeme;
 
 import java.io.IOException;
 import java.io.StringReader;
