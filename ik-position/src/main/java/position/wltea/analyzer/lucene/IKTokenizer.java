@@ -23,13 +23,13 @@
  */
 package position.wltea.analyzer.lucene;
 
-import position.wltea.analyzer.core.IKSegmenter;
-import position.wltea.analyzer.core.Lexeme;
 import org.apache.lucene.analysis.Tokenizer;
 import org.apache.lucene.analysis.tokenattributes.CharTermAttribute;
 import org.apache.lucene.analysis.tokenattributes.OffsetAttribute;
 import org.apache.lucene.analysis.tokenattributes.TypeAttribute;
 import org.apache.lucene.util.AttributeFactory;
+import position.wltea.analyzer.core.IKSegmenter;
+import position.wltea.analyzer.core.Lexeme;
 
 import java.io.IOException;
 

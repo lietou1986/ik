@@ -1,6 +1,5 @@
 package org.apache.solr.analysis;
 
-import org.mlcs.search.mlcsseg.common.ScheduledExecutor;
 import org.apache.lucene.analysis.Analyzer;
 import org.apache.lucene.analysis.TokenStream;
 import org.apache.lucene.analysis.core.LowerCaseFilter;
@@ -11,6 +10,7 @@ import org.apache.lucene.analysis.synonym.SynonymMap;
 import org.apache.lucene.analysis.util.ResourceLoader;
 import org.apache.lucene.analysis.util.ResourceLoaderAware;
 import org.apache.lucene.analysis.util.TokenFilterFactory;
+import org.mlcs.search.mlcsseg.common.ScheduledExecutor;
 
 import java.io.File;
 import java.io.IOException;

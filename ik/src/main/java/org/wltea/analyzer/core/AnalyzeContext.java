@@ -30,9 +30,7 @@ import java.io.Reader;
 import java.util.*;
 
 /**
- *
  * 分词器上下文状态
- *
  */
 class AnalyzeContext {
 
@@ -106,7 +104,8 @@ class AnalyzeContext {
     }
 
     /**
-     * 根据context的上下文情况，填充segmentBuff 
+     * 根据context的上下文情况，填充segmentBuff
+     *
      * @param reader
      * @return 返回待分析的（有效的）字串长度
      * @throws java.io.IOException
@@ -161,6 +160,7 @@ class AnalyzeContext {
     /**
      * 设置当前segmentBuff为锁定状态
      * 加入占用segmentBuff的子分词器名称，表示占用segmentBuff
+     *
      * @param segmenterName
      */
     void lockBuffer(String segmenterName) {
@@ -169,6 +169,7 @@ class AnalyzeContext {
 
     /**
      * 移除指定的子分词器名，释放对segmentBuff的占用
+     *
      * @param segmenterName
      */
     void unlockBuffer(String segmenterName) {
@@ -178,6 +179,7 @@ class AnalyzeContext {
     /**
      * 只要buffLocker中存在segmenterName
      * 则buffer被锁定
+     *
      * @return boolean 缓冲去是否被锁定
      */
     boolean isBufferLocked() {
@@ -187,6 +189,7 @@ class AnalyzeContext {
     /**
      * 判断当前segmentBuff是否已经用完
      * 当前执针cursor移至segmentBuff末端this.available - 1
+     *
      * @return
      */
     boolean isBufferConsumed() {
@@ -195,12 +198,13 @@ class AnalyzeContext {
 
     /**
      * 判断segmentBuff是否需要读取新数据
-     *
+     * <p>
      * 满足一下条件时，
      * 1.available == BUFF_SIZE 表示buffer满载
      * 2.buffIndex < available - 1 && buffIndex > available - BUFF_EXHAUST_CRITICAL表示当前指针处于临界区内
      * 3.!context.isBufferLocked()表示没有segmenter在占用buffer
      * 要中断当前循环（buffer要进行移位，并再读取数据的操作）
+     *
      * @return
      */
     boolean needRefillBuffer() {
@@ -219,6 +223,7 @@ class AnalyzeContext {
 
     /**
      * 向分词结果集添加词元
+     *
      * @param lexeme
      */
     void addLexeme(Lexeme lexeme) {
@@ -228,6 +233,7 @@ class AnalyzeContext {
     /**
      * 添加分词结果路径
      * 路径起始位置 ---> 路径 映射表
+     *
      * @param path
      */
     void addLexemePath(LexemePath path) {
@@ -239,6 +245,7 @@ class AnalyzeContext {
 
     /**
      * 返回原始分词结果
+     *
      * @return
      */
     QuickSortSet getOrgLexemes() {
@@ -293,6 +300,7 @@ class AnalyzeContext {
 
     /**
      * 对CJK字符进行单字输出
+     *
      * @param index
      */
     private void outputSingleCJK(int index) {
@@ -307,8 +315,9 @@ class AnalyzeContext {
 
     /**
      * 返回lexeme
-     *
+     * <p>
      * 同时处理合并
+     *
      * @return
      */
     Lexeme getNextLexeme() {

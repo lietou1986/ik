@@ -46,6 +46,7 @@ public class WordSegServiceImpl extends IKWordSegServiceImpl {
      */
     @Override
     public WordModel segWord(String input) {
+
         WordModel wordModel = super.segWord(input);//IK基本分词
 
         //分词校准

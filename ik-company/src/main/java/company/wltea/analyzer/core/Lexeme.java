@@ -24,7 +24,7 @@
 package company.wltea.analyzer.core;
 
 /**
- * IK词元对象 
+ * IK词元对象
  */
 public class Lexeme implements Comparable<Lexeme> {
     //lexemeType常量
@@ -146,6 +146,7 @@ public class Lexeme implements Comparable<Lexeme> {
 
     /**
      * 获取词元在文本中的起始位置
+     *
      * @return int
      */
     public int getBeginPosition() {
@@ -158,6 +159,7 @@ public class Lexeme implements Comparable<Lexeme> {
 
     /**
      * 获取词元在文本中的结束位置
+     *
      * @return int
      */
     public int getEndPosition() {
@@ -166,6 +168,7 @@ public class Lexeme implements Comparable<Lexeme> {
 
     /**
      * 获取词元的字符长度
+     *
      * @return int
      */
     public int getLength() {
@@ -181,6 +184,7 @@ public class Lexeme implements Comparable<Lexeme> {
 
     /**
      * 获取词元的文本内容
+     *
      * @return String
      */
     public String getLexemeText() {
@@ -202,6 +206,7 @@ public class Lexeme implements Comparable<Lexeme> {
 
     /**
      * 获取词元类型
+     *
      * @return int
      */
     public int getLexemeType() {
@@ -210,6 +215,7 @@ public class Lexeme implements Comparable<Lexeme> {
 
     /**
      * 获取词元类型标示字符串
+     *
      * @return String
      */
     public String getLexemeTypeString() {
@@ -254,6 +260,7 @@ public class Lexeme implements Comparable<Lexeme> {
 
     /**
      * 合并两个相邻的词元
+     *
      * @param l
      * @param lexemeType
      * @return boolean 词元是否成功合并

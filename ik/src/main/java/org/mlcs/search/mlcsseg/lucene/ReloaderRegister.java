@@ -1,7 +1,7 @@
 package org.mlcs.search.mlcsseg.lucene;
 
-import org.mlcs.search.mlcsseg.common.ScheduledExecutor;
 import org.apache.lucene.analysis.util.ResourceLoader;
+import org.mlcs.search.mlcsseg.common.ScheduledExecutor;
 
 import java.io.IOException;
 import java.io.InputStream;

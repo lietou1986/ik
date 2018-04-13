@@ -1,11 +1,11 @@
 package org.apache.solr.analysis;
 
-import org.mlcs.search.mlcsseg.common.ScheduledExecutor;
 import org.apache.lucene.analysis.CharArraySet;
 import org.apache.lucene.analysis.TokenStream;
 import org.apache.lucene.analysis.util.ResourceLoader;
 import org.apache.lucene.analysis.util.ResourceLoaderAware;
 import org.apache.lucene.analysis.util.TokenFilterFactory;
+import org.mlcs.search.mlcsseg.common.ScheduledExecutor;
 
 import java.io.IOException;
 import java.io.InputStream;

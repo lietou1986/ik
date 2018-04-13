@@ -26,7 +26,6 @@ package org.wltea.analyzer.core;
 import java.util.Arrays;
 
 /**
- *
  * 英文字符及阿拉伯数字子分词器
  */
 class LetterSegmenter implements ISegmenter {
@@ -119,6 +118,7 @@ class LetterSegmenter implements ISegmenter {
     /**
      * 处理数字字母混合输出
      * 如：windos2000 | linliangyi2005@gmail.com
+     *
      * @param input
      * @param context
      * @return
@@ -176,6 +176,7 @@ class LetterSegmenter implements ISegmenter {
 
     /**
      * 处理纯英文字母输出
+     *
      * @param context
      * @return
      */
@@ -224,6 +225,7 @@ class LetterSegmenter implements ISegmenter {
 
     /**
      * 处理阿拉伯数字输出
+     *
      * @param context
      * @return
      */
@@ -275,6 +277,7 @@ class LetterSegmenter implements ISegmenter {
 
     /**
      * 判断是否是字母连接符号
+     *
      * @param input
      * @return
      */
@@ -285,6 +288,7 @@ class LetterSegmenter implements ISegmenter {
 
     /**
      * 判断是否是数字连接符号
+     *
      * @param input
      * @return
      */

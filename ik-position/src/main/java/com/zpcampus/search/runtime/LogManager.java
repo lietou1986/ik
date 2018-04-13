@@ -1,4 +1,5 @@
 package com.zpcampus.search.runtime;
+
 import org.apache.log4j.Level;
 
 public class LogManager {

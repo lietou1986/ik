@@ -31,7 +31,7 @@ import java.util.List;
 
 
 /**
- *  中文-日韩文子分词器
+ * 中文-日韩文子分词器
  */
 class CJKSegmenter implements ISegmenter {
 

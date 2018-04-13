@@ -3,11 +3,8 @@ package com.zpcampus.search;
 import com.zpcampus.search.model.WordModel;
 import com.zpcampus.search.service.WordSegService;
 import com.zpcampus.search.service.imp.WordSegServiceImpl;
-import position.wltea.analyzer.core.IKSegmenter;
-import position.wltea.analyzer.core.Lexeme;
 
 import java.io.IOException;
-import java.io.StringReader;
 
 /**
  * Created by len.zhang on 2016/11/1.

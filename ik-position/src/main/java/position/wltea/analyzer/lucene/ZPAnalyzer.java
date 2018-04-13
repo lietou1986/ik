@@ -44,7 +44,7 @@ public final class ZPAnalyzer extends Analyzer {
 
     /**
      * IK分词器Lucene  Analyzer接口实现类
-     *
+     * <p>
      * 默认细粒度切分算法
      */
     public ZPAnalyzer() {
